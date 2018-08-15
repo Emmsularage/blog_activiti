@@ -1,0 +1,13 @@
+<ul class="list-group">
+  <app-post-view *ngFor="let post of posts; let i = index"
+                 [post]="post"
+                 [index]="i"
+                 [ngClass]="
+                 {
+                  'list-group-item': true,
+                  'list-group-item-success': post.likes - post.dislikes > 0,
+                  'list-group-item-danger': post.likes - post.dislikes < 0,
+                  'list-group-item-primary': post.likes === post.dislikes
+                 }"
+  ></app-post-view>
+</ul>
