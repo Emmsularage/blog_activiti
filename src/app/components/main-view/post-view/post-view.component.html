@@ -2,7 +2,7 @@
 <p>{{ this.post.content }}</p>
 <p><I>{{ this.post.created_at | date: 'short' }}</I></p>
 <div>
-  <button type="button" class="btn btn-success" (click)="onLikePost()">{{ 'Like' }} ({{ this.post.likes }})</button>
-  <button type="button" class="btn btn-danger" (click)="onDislikePost()">{{ 'Dislike' }} ({{ this.post.dislikes }})</button>
+  <button type="button" class="btn btn-success" (click)="onLikePost()"  style="border-radius: 0px !important">({{ this.post.likes }})</button>
+  <button type="button" class="btn btn-danger" (click)="onDislikePost()"  style="border-radius: 0px !important"> ({{ this.post.dislikes }})</button>
   <button type="button" class="btn btn-danger pull-right" (click)="onDeletePost()">Delete</button>
 </div>
